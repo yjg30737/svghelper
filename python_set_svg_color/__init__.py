@@ -1,1 +1,1 @@
-from setsvgcolor import set_svg_color
+from python_set_svg_color.setsvgcolor import set_svg_color
