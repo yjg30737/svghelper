@@ -1,4 +1,4 @@
-# python-set-svg-color
+# svghelper
 Set svg color with Python
 
 ## Method Overview
