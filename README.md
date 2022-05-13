@@ -1,5 +1,8 @@
-# python-set-svg-color
-Set svg color with Python
+# svghelper
+Python SVG helper. set svg color, etc.
+
+## Install
+`python -m pip install svghelper`
 
 ## Method Overview
 * `set_svg_color(input_file: str, output_file: str, color: str)` - `input_file` is source, `output_file` is result. `color` argument should be 6 digits string color like `#FF0000`.
