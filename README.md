@@ -1,4 +1,4 @@
-# svghelper
+# python-set-svg-color
 Set svg color with Python
 
 ## Method Overview
@@ -7,10 +7,10 @@ Set svg color with Python
 ## Example
 ### Code Sample
 ```python
-import svghelper
+import python_set_svg_color
 
 # Copy capture.svg as capture2.svg and change the major color of it to #FF0000(red)
-set_svg_color('capture.svg', 'capture2.svg', '#FF0000') 
+python_set_svg_color.set_svg_color('capture.svg', 'capture2.svg', '#FF0000') 
 ```
 
 ### Result
