@@ -10,7 +10,7 @@ Set svg color with Python
 import svghelper
 
 # Copy capture.svg as capture2.svg and change the major color of it to #FF0000(red)
-python_set_svg_color.set_svg_color('capture.svg', 'capture2.svg', '#FF0000') 
+set_svg_color('capture.svg', 'capture2.svg', '#FF0000') 
 ```
 
 ### Result
