@@ -18,7 +18,7 @@ setup(
     url='https://github.com/yjg30737/svghelper.git',
     long_description_content_type='text/markdown',
     long_description=long_description,
-    install_required=[
+    install_requires=[
         'colorgetter>=0.0.1'
     ]
 )
