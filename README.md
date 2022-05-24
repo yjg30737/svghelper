@@ -12,6 +12,9 @@ Python SVG helper. set/replace svg color, etc.
 * `set_comp_color(input_file: str, output_file: str)` - set complementary color.
 * `set_files_comp_color(input_dir: str, output_dir: str)` - set svg files' complementary color
 
+## Included Package
+* <a href="https://github.com/yjg30737/colorgetter.git">colorgetter</a>
+
 ## Example
 ### Code Sample
 ```python
