@@ -1,1 +1,1 @@
-from svghelper.main import set_svg_color
+from svghelper.main import *

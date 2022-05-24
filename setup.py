@@ -17,5 +17,8 @@ setup(
     description='Python SVG helper. set svg color, etc.',
     url='https://github.com/yjg30737/svghelper.git',
     long_description_content_type='text/markdown',
-    long_description=long_description
+    long_description=long_description,
+    install_required=[
+        'colorgetter>=0.0.1'
+    ]
 )
