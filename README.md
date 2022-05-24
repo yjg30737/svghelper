@@ -1,11 +1,14 @@
 # svghelper
-Python SVG helper. set svg color, etc.
+Python SVG helper. set/replace svg color, etc.
 
 ## Install
 `python -m pip install svghelper`
 
 ## Method Overview
-* `set_svg_color(input_file: str, output_file: str, color: str)` - `input_file` is source, `output_file` is result. `color` argument should be 6 digits string color like `#FF0000`.
+* `set_color(input_file: str, output_file: str, color: str)` - set the color of a svg file. `input_file` is source, `output_file` is result. `color` argument should be 6 digits string color like `#FF0000`.
+* `set_files_color(input_dir: str, output_dir: str, output_color: str)` - set the color of svg files in the `input_dir`.
+* `replace_color(input_file: str, output_file: str, input_color: str, output_color: str)` - replace the color.
+* `replace_files_color(input_dir: str, output_dir: str, input_color: str, output_color: str)` - replace svg files' color.
 
 ## Example
 ### Code Sample
@@ -13,7 +16,7 @@ Python SVG helper. set svg color, etc.
 import svghelper
 
 # Copy capture.svg as capture2.svg and change the major color of it to #FF0000(red)
-svghelper.set_svg_color('capture.svg', 'capture2.svg', '#FF0000')
+svghelper.set_color('capture.svg', 'capture2.svg', '#FF0000')
 ```
 
 ### Result
