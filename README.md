@@ -9,8 +9,8 @@ Python SVG helper. set/replace svg color, etc.
 * `set_files_color(input_dir: str, output_dir: str, output_color: str)` - set the color of svg files in the `input_dir`.
 * `replace_color(input_file: str, output_file: str, input_color: str, output_color: str)` - replace the color.
 * `replace_files_color(input_dir: str, output_dir: str, input_color: str, output_color: str)` - replace svg files' color.
-* `set_comp_color(input_file: str, output_file: str)` - set complementary color
-* `set_files_comp_color(input_dir: str, output_dir: str)`
+* `set_comp_color(input_file: str, output_file: str)` - set complementary color.
+* `set_files_comp_color(input_dir: str, output_dir: str)` - set svg files' complementary color
 
 ## Example
 ### Code Sample
