@@ -49,7 +49,7 @@ def set_comp_color(input_file: str, output_file: str):
         if name == 'path':
             color = el.get('fill', '#000000')
             comp_color = rgb_to_hex(
-                            *get_complementary_color(
+                            *get_comp_color(
                                 *hex_to_rgb(color)
                             )
                         )
