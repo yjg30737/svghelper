@@ -3,13 +3,19 @@ import xml.etree.ElementTree as ET
 
 from colorgetter import *
 
-
 def set_color(input_file: str, output_file: str, output_color: str):
     tree = ET.parse(input_file)
     root = tree.getroot()
     for el in root.iter():
         name = el.tag.split('}')[1]
-        if name == 'path':
+        if name == 'g':
+            color = el.get('fill')
+            if color:
+                el.set('fill', output_color)
+                break
+            else:
+                pass
+        elif name == 'path':
             el.set('fill', output_color)
     with open(output_file, 'wb') as f:
         tree.write(f)
@@ -27,7 +33,15 @@ def replace_color(input_file: str, output_file: str, input_color: str, output_co
     root = tree.getroot()
     for el in root.iter():
         name = el.tag.split('}')[1]
-        if name == 'path':
+        if name == 'g':
+            color = el.get('fill')
+            if color:
+                if color == input_color:
+                    el.set('fill', output_color)
+                    break
+            else:
+                pass
+        elif name == 'path':
             if el.get('fill', input_color) == input_color:
                 el.set('fill', output_color)
     with open(output_file, 'wb') as f:
@@ -46,7 +60,19 @@ def set_comp_color(input_file: str, output_file: str):
     root = tree.getroot()
     for el in root.iter():
         name = el.tag.split('}')[1]
-        if name == 'path':
+        if name == 'g':
+            color = el.get('fill')
+            if color:
+                comp_color = rgb_to_hex(
+                    *get_comp_color(
+                        *hex_to_rgb(color)
+                    )
+                )
+                el.set('fill', comp_color)
+                break
+            else:
+                pass
+        elif name == 'path':
             color = el.get('fill', '#000000')
             comp_color = rgb_to_hex(
                             *get_comp_color(
